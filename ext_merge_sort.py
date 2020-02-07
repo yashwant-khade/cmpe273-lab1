@@ -1,4 +1,3 @@
-
 def external_sort(nums, heap_size, root_index):
     largest = root_index
     left_child = (2 * root_index) + 1
@@ -43,6 +42,10 @@ def solution():
         file.write(str(i))
         file.write('\n')
 
-
 if __name__ == '__main__':
+    import time
+    start = time.time()
     solution()
+    end = time.time()
+    file = open('output/time.txt', 'w+')
+    file.writelines(str(end-start))
