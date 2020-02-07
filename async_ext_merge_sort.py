@@ -56,10 +56,10 @@ if __name__ == '__main__':
     loop = asyncio.get_event_loop()
     loop.run_until_complete(helper(THREAD_POOL))
     external_sort_helper(ds)
-    file = open('output/async_sorted.txt', 'w+')
+    file = open('output/async_sorted.txt', 'w')
     for i in ds:
         file.write(str(i))
         file.write('\n')
     end = time.time()
-    file = open('output/async_time.txt', 'w+')
+    file = open('output/async_time.txt', 'w')
     file.writelines(str(end - start))
